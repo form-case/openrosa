@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Formulario Inspección Moto</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation default="true()" lang="default">
+          <text id="/aAKox6YuSjE87NphTH34qG/consent./logo:label">
+            <value>.</value>
+            <value form="image">jr://images/Logo_MC_Horizontal.png</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <aAKox6YuSjE87NphTH34qG id="aAKox6YuSjE87NphTH34qG">
+          <start/>
+          <end/>
+          <today/>
+          <consent.>
+            <logo/>
+            <consent/>
+            <consent_ok/>
+            <end_t/>
+          </consent.>
+          <Demographic>
+            <FechaInspeccion/>
+            <HoraInspeccion/>
+            <Inspector/>
+            <Documento/>
+            <NombreConductor/>
+            <ApellidosConductor/>
+            <CorreoElectronico/>
+            <LicenciaVigente/>
+            <FotoLicencia/>
+            <SOATVigente/>
+            <FotoSOAT/>
+            <RevisionVigente/>
+            <FotoRevision/>
+            <Placa/>
+            <FotoPlaca/>
+            <ID/>
+            <N1/>
+            <Marca/>
+            <DetalleMarca/>
+            <Modelo/>
+            <KilometrajeInicial/>
+            <Casco/>
+            <Guante/>
+            <Chaqueta/>
+            <Rodilleras/>
+            <DireccionalesDelanteros/>
+            <DireccionalesTraseros/>
+            <IndicadoresTablero/>
+            <FotoTablero/>
+            <EstadoCombustible/>
+            <EmbragueFuncionando/>
+            <FrenoDelanteroFuncionando/>
+            <FrenoPedalFuncionando/>
+            <EstadoLlantas/>
+            <FotoLlantaDel/>
+            <FotoLlantaTras/>
+            <EstadoRines/>
+            <EstadoKitArrastre/>
+            <FotoKitArrastre/>
+            <LucesAltas/>
+            <LucesBajas/>
+            <LuzStop/>
+            <TieneEspejos/>
+            <FotoVehiculoCompletoDer/>
+            <FotoVehiculoCompletoIz/>
+          </Demographic>
+          <meta>
+            <audit/>
+            <instanceID/>
+          </meta>
+        </aAKox6YuSjE87NphTH34qG>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/aAKox6YuSjE87NphTH34qG/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/aAKox6YuSjE87NphTH34qG/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/aAKox6YuSjE87NphTH34qG/today" type="date"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/consent." required="false()"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/consent./logo" readonly="true()" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/consent./consent" readonly="true()" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/consent./consent_ok" required="true()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/consent./end_t" readonly="true()" relevant=" /aAKox6YuSjE87NphTH34qG/consent./consent_ok  = '02'" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic" relevant=" /aAKox6YuSjE87NphTH34qG/consent./consent_ok  = '01'" required="false()"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FechaInspeccion" required="true()" type="date"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/HoraInspeccion" required="true()" type="time"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Inspector" required="true()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Documento" required="false()" type="string"/>
+      <bind constraint="regex(.,'^[A-Z a-zÑñáéíóúÁÉÍÓÚ]{3,150}$')" jr:constraintMsg="Por favor ingrese mínimo tres caracteres" nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/NombreConductor" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/ApellidosConductor" required="false()" type="string"/>
+      <bind constraint="regex(., '^([A-Za-z0-9!#$%&amp;\*\+\-\/=?^`{|}~])+(\.?([\w!#$%&amp;\*\+\-\/=?^`{|}~]))*@([A-Za-z0-9]+(\-+[A-Za-z0-9]+)*\.)+([A-Za-z0-9])+$(?!\n)')" jr:constraintMsg="Por favor, asegúrese de ingresar una dirección de correo electrónico válida" nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/CorreoElectronico" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/LicenciaVigente" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLicencia" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/SOATVigente" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoSOAT" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/RevisionVigente" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoRevision" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Placa" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoPlaca" required="false()" type="binary"/>
+      <bind calculate="concat( /aAKox6YuSjE87NphTH34qG/Demographic/Documento ,'-',( /aAKox6YuSjE87NphTH34qG/Demographic/Placa ),'-',format-date( /aAKox6YuSjE87NphTH34qG/Demographic/FechaInspeccion ,'%Y%m%d'))" nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/ID" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/N1" readonly="true()" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Marca" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/DetalleMarca" relevant=" /aAKox6YuSjE87NphTH34qG/Demographic/Marca  = '09'" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Modelo" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/KilometrajeInicial" required="false()" type="int"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Casco" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Guante" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Chaqueta" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/Rodilleras" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/DireccionalesDelanteros" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/DireccionalesTraseros" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/IndicadoresTablero" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoTablero" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoCombustible" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/EmbragueFuncionando" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FrenoDelanteroFuncionando" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FrenoPedalFuncionando" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoLlantas" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLlantaDel" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLlantaTras" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoRines" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoKitArrastre" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoKitArrastre" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/LucesAltas" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/LucesBajas" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/LuzStop" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/TieneEspejos" required="false()" type="string"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoVehiculoCompletoDer" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/Demographic/FotoVehiculoCompletoIz" required="false()" type="binary"/>
+      <bind nodeset="/aAKox6YuSjE87NphTH34qG/meta/audit" type="binary"/>
+      <bind jr:preload="uid" nodeset="/aAKox6YuSjE87NphTH34qG/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/aAKox6YuSjE87NphTH34qG/consent.">
+      <input ref="/aAKox6YuSjE87NphTH34qG/consent./logo">
+        <label ref="jr:itext('/aAKox6YuSjE87NphTH34qG/consent./logo:label')"/>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/consent./consent">
+        <label>__Autorización de datos personales__</label>
+        <hint>Dando cumplimiento a la Ley vigente de tratamiento de datos personales 1581 de 2012, el decreto 1377 de 2013 y demás normas que las complementan. Con la firma de este documento manifiesto que Mercy Corps me ha informado que:
+Mercy Corps es responsable del tratamiento de los datos personales de los cuales soy titular y que podrán recolectar, usar y tratar conforme la Política de Tratamiento de Datos Personales de Mercy Corps.</hint>
+      </input>
+      <select1 appearance="minimal" ref="/aAKox6YuSjE87NphTH34qG/consent./consent_ok">
+        <label>¿Está usted de acuerdo con las condiciones expuestas anteriormente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <input ref="/aAKox6YuSjE87NphTH34qG/consent./end_t">
+        <label>Gracias</label>
+        <hint>Muchas gracias por su tiempo, no podemos continuar con el proceso dado que no contamos con su consentimiento.</hint>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/aAKox6YuSjE87NphTH34qG/Demographic">
+      <label>Información</label>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/FechaInspeccion">
+        <label>Fecha de la inspección</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/HoraInspeccion">
+        <label>Hora de la inspección</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/Inspector">
+        <label>Persona que realiza la inspección</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/Documento">
+        <label>Número de documento</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/NombreConductor">
+        <label>Nombres del conductor</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/ApellidosConductor">
+        <label>Apellidos del conductor</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/CorreoElectronico">
+        <label>Correo electrónico</label>
+      </input>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/LicenciaVigente">
+        <label>¿Licencia de tránsito vigente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLicencia">
+        <label>Foto Licencia de transito</label>
+      </upload>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/SOATVigente">
+        <label>SOAT vigente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoSOAT">
+        <label>Foto del SOAT</label>
+      </upload>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/RevisionVigente">
+        <label>¿Revisión técnico-mecánica vigente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoRevision">
+        <label>Foto técnico-mecánica</label>
+      </upload>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/Placa">
+        <label>Número de la Placa</label>
+      </input>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoPlaca">
+        <label>Foto de la placa</label>
+      </upload>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/N1">
+        <label> Código único <output value=" /aAKox6YuSjE87NphTH34qG/Demographic/ID "/> </label></input>
+      <select1 appearance="minimal" ref="/aAKox6YuSjE87NphTH34qG/Demographic/Marca">
+        <label>Marca</label>
+        <item>
+          <label>Suzuki</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>Yamaha</label>
+          <value>02</value>
+        </item>
+        <item>
+          <label>Honda</label>
+          <value>03</value>
+        </item>
+        <item>
+          <label>Um</label>
+          <value>04</value>
+        </item>
+        <item>
+          <label>Akt</label>
+          <value>05</value>
+        </item>
+        <item>
+          <label>Kawasaki</label>
+          <value>06</value>
+        </item>
+        <item>
+          <label>Pulsar</label>
+          <value>07</value>
+        </item>
+        <item>
+          <label>Ktm</label>
+          <value>08</value>
+        </item>
+        <item>
+          <label>Otra</label>
+          <value>09</value>
+        </item>
+      </select1>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/DetalleMarca">
+        <label>¿Cual?</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/Modelo">
+        <label>Modelo (Año)</label>
+      </input>
+      <input ref="/aAKox6YuSjE87NphTH34qG/Demographic/KilometrajeInicial">
+        <label>Kilometraje Inicial</label>
+      </input>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/Casco">
+        <label>Casco</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/Guante">
+        <label>Guantes</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/Chaqueta">
+        <label>Chaqueta</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/Rodilleras">
+        <label>Rodilleras</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/DireccionalesDelanteros">
+        <label>¿Direccionales delanteros funcionan?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/DireccionalesTraseros">
+        <label>¿Direccionales traseros funcionan?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/IndicadoresTablero">
+        <label>¿Los indicadores de tablero de mandos funcionan?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoTablero">
+        <label>Foto del Tablero de mandos</label>
+      </upload>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoCombustible">
+        <label>Nivel de combustible</label>
+        <item>
+          <label>Full</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>Medio</label>
+          <value>02</value>
+        </item>
+        <item>
+          <label>Bajo</label>
+          <value>03</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/EmbragueFuncionando">
+        <label>¿El embrague funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/FrenoDelanteroFuncionando">
+        <label>¿El freno delantero funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/FrenoPedalFuncionando">
+        <label>¿El freno de pedal funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoLlantas">
+        <label>¿Estado de las llantas?</label>
+        <item>
+          <label>Bueno</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>Regular</label>
+          <value>02</value>
+        </item>
+        <item>
+          <label>Malo</label>
+          <value>03</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLlantaDel">
+        <label>Foto del estado de la llanta delantera</label>
+      </upload>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoLlantaTras">
+        <label>Foto del estado de la llanta trasera</label>
+      </upload>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoRines">
+        <label>¿Estado de los rines?</label>
+        <item>
+          <label>Bueno</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>Regular</label>
+          <value>02</value>
+        </item>
+        <item>
+          <label>Malo</label>
+          <value>03</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/EstadoKitArrastre">
+        <label>¿Estado del kit de arrastre?</label>
+        <item>
+          <label>Bueno</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>Regular</label>
+          <value>02</value>
+        </item>
+        <item>
+          <label>Malo</label>
+          <value>03</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoKitArrastre">
+        <label>Foto kit de arrastre</label>
+      </upload>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/LucesAltas">
+        <label>¿La luz alta funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/LucesBajas">
+        <label>¿La luz baja funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/LuzStop">
+        <label>¿La luz de Stop funciona correctamente?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <select1 ref="/aAKox6YuSjE87NphTH34qG/Demographic/TieneEspejos">
+        <label>¿Cuenta con los dos espejos retrovisores?</label>
+        <item>
+          <label>Sí</label>
+          <value>01</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>02</value>
+        </item>
+      </select1>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoVehiculoCompletoDer">
+        <label>Foto completa de la moto costado derecho</label>
+      </upload>
+      <upload mediatype="image/*" ref="/aAKox6YuSjE87NphTH34qG/Demographic/FotoVehiculoCompletoIz">
+        <label>Foto completa de la motocicleta costado izquierdo</label>
+      </upload>
+    </group>
+  </h:body>
+</h:html>
